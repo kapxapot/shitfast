@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { PaintRollerIcon as RollIcon, TableIcon as Toilet, Zap } from "lucide-react"
+import Copyright from "@/components/copyright"
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <header className="px-4 lg:px-6 h-14 flex items-center">
         <Link className="flex items-center justify-center" href="/">
           <Toilet className="h-6 w-6 mr-2" />
-          <span className="font-bold">ShitFast.pro</span>
+          <span className="font-bold">ShitFast</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">
@@ -31,12 +32,13 @@ export default function Home() {
                   Unleash Your Inner Speed Pooper
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-                  Revolutionize your bathroom breaks with ShitFast.pro. Because life&apos;s too short for slow shits.
+                  Revolutionize your bathroom breaks with ShitFast. Because life&apos;s too short for slow shits.
                 </p>
               </div>
               <div className="space-x-4">
-                <Button>Get Started</Button>
-                <Button variant="outline">Learn More</Button>
+                <Button>
+                  <Link href="https://www.buymeacoffee.com/kapxapot" target="_blank" rel="noopener noreferrer">Get Started</Link>
+                </Button>
               </div>
             </div>
           </div>
@@ -44,7 +46,7 @@ export default function Home() {
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-              Why Choose ShitFast.pro?
+              Why Choose ShitFast?
             </h2>
             <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
               <div className="flex flex-col items-center space-y-2 border-gray-200 p-4 rounded-lg">
@@ -78,7 +80,7 @@ export default function Home() {
                 <p className="font-bold">- Speedy Steve</p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-200 p-4 rounded-lg">
-                <p className="text-gray-500 italic">&quot;ShitFast.pro changed my life. I&apos;ve never felt so productive!&quot;</p>
+                <p className="text-gray-500 italic">&quot;ShitFast changed my life. I&apos;ve never felt so productive!&quot;</p>
                 <p className="font-bold">- Efficient Emma</p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-200 p-4 rounded-lg">
@@ -140,7 +142,9 @@ export default function Home() {
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500">© 2023 ShitFast.pro. All rights reserved. (Not really, it&apos;s a joke!)</p>
+        <p className="text-xs text-gray-500">
+          <Copyright baseYear={2025} name="ShitFast" />
+        </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
             Terms of Service
